@@ -35,6 +35,10 @@ mvn clean compile install
 
 ## 사용 방법
 
+<br>
+
+### 설치
+
 <p> 빌드를 했다고 가정한 후 설명하겠습니다. target 폴더 내의 korean-parser-{version}.zip 형식의 파일이 들어있습니다. 아래와 같이 플러그인을 인스톨해주시기 바랍니다.</p>
 
 ```
@@ -49,6 +53,58 @@ cd /usr/share/elasticsearch/bin
 ```
 cd /usr/share/elasticsearch/bin
 ./elasticsearch-plugin remove korean-parser
+```
+
+<br>
+
+### 사용 방법
+
+<p> elastic_jamo : 자동완성에서 한글을 검색 가능한 형태로 변형하는 플러그인 입니다. 예를 들어 삼성전자의 경우 삼ㅅ만 검색하여도 삼성전자가 검색 될수 있도록 한글의 자소를 분해하여 검색 할 수 있도록 합니다.</p>
+
+```
+PUT /company_spellchecker
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "korean_spell_check": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "trim",
+            "lowercase",
+            "elastic_jamo"
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+<br>
+
+<p> elastic_eng2kor, elastic_kor2eng : 한글을 영문으로, 영문을 한글로 검색한 결과를 보정해주는 플러그인 입니다. 예를들어 삼성전자를 tkatjdwjswk 라고 검색하거나 ㅑㅔㅙㅜㄷ와 같이 iphone 을 잘못 검색한 경우 검색 결과를 도출 할수 있도록 도와줍니다.</p>
+
+```
+PUT /company_spellchecker
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "korean_spell_check": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "trim",
+            "lowercase",
+            "elastic_jamo"
+          ]
+        }
+      }
+    }
+  }
+}
 ```
 
 <br>
