@@ -87,18 +87,27 @@ PUT /company_spellchecker
 <p> elastic_eng2kor, elastic_kor2eng : 한글을 영문으로, 영문을 한글로 검색한 결과를 보정해주는 플러그인 입니다. 예를들어 삼성전자를 tkatjdwjswk 라고 검색하거나 ㅑㅔㅙㅜㄷ와 같이 iphone 을 잘못 검색한 경우 검색 결과를 도출 할수 있도록 도와줍니다.</p>
 
 ```
-PUT /company_spellchecker
+PUT /company_koreng
 {
   "settings": {
     "analysis": {
       "analyzer": {
-        "korean_spell_check": {
+        "kor2engAnalyzer": {
           "type": "custom",
           "tokenizer": "standard",
           "filter": [
             "trim",
             "lowercase",
-            "elastic_jamo"
+            "elastic_kor2eng"
+          ]
+        },
+        "eng2korAnalyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "trim",
+            "lowercase",
+            "elastic_eng2kor"
           ]
         }
       }
