@@ -1,0 +1,17 @@
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\factory\ElasticEng2KorConvertFilterFactory.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\parser\KoreanJamoParser.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\parser\KoreanChosungParser.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\factory\ElasticKor2EngConvertFilterFactory.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\converter\KorToEngConverter.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\util\HangulUtil.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\merger\KoreanMerger.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\factory\ElasticChosungTokenFilterFactory.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\property\ConstProperties.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\parser\AbstractKoreanParser.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\factory\ElasticJamoTokenFilterFactory.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\type\CodeType.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\util\JamoUtil.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\util\KeyboardUtil.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\plugin\analysis\KoreanParserPlugin.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\common\converter\EngToKorConverter.java
+C:\Users\Admin\Documents\eclipse-workspace\elasticsearchPlugin\src\main\java\org\elasticsearch\index\filter\ElasticTokenFilter.java

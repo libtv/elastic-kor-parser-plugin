@@ -1,0 +1,13 @@
+org\elasticsearch\plugin\esTest\JavacafeChosungTest.class
+org\elasticsearch\plugin\esTest\JavacafeJamoTest.class
+org\elasticsearch\plugin\luceneTest\TokenTest.class
+org\elasticsearch\plugin\esTest\JavacafeSpellTest.class
+org\elasticsearch\plugin\utilTest\SpellCheckTest.class
+org\elasticsearch\plugin\utilTest\ConverterE2KTest.class
+org\elasticsearch\plugin\utilTest\MergerTest.class
+org\elasticsearch\plugin\utilTest\ParserJamoTest.class
+org\elasticsearch\plugin\utilTest\ParserChosungTest.class
+org\elasticsearch\plugin\esTest\JavacafeKor2EngTest.class
+org\elasticsearch\plugin\esTest\JavacafeEng2KorTest.class
+org\elasticsearch\plugin\esTest\AbstractPluginTest.class
+org\elasticsearch\plugin\utilTest\ConverterK2ETest.class
