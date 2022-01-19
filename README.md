@@ -118,6 +118,75 @@ PUT /company_koreng
 
 <br>
 
+## junho korean parser
+
+해당 인덱스를 통해 자동완성 및 오타 검정을 수행할 수 있습니다.
+
+```
+---------------------------------------------------------------------------
+PUT /ac_test3
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "korean_spell_check_front": {
+          "type": "custom",
+          "tokenizer": "edge_ngram_tokenizer",
+          "filter": [
+            "trim",
+            "lowercase",
+            "elastic_jamo",
+            "edge_ngram_filter_front"
+          ]
+        },
+        "korean_spell_check_back": {
+          "type": "custom",
+          "tokenizer": "edge_ngram_tokenizer",
+          "filter": [
+            "trim",
+            "lowercase",
+            "elastic_jamo",
+            "edge_ngram_filter_back"
+          ]
+        },
+        "my_search_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "trim",
+            "lowercase",
+            "elastic_jamo"
+          ]
+        }
+      },
+      "filter": {
+        "edge_ngram_filter_back": {
+          "type": "edgeNGram",
+          "min_gram": "1",
+          "max_gram": "50",
+          "side": "back"
+        },
+        "edge_ngram_filter_front": {
+          "type": "edgeNGram",
+          "min_gram": "1",
+          "max_gram": "50",
+          "side": "front"
+        }
+      },
+      "tokenizer": {
+        "edge_ngram_tokenizer": {
+          "type": "edgeNGram",
+          "min_gram": "1",
+          "max_gram": "50"
+        }
+      }
+    }
+  }
+}
+```
+
+<br>
+
 ## 레퍼런스
 
 엘라스틱서치 실무 가이드 책을 지필해주신 javacafe 여러분, 다시한번 감사말씀 드립니다.
